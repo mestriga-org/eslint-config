@@ -6,7 +6,7 @@
 		"npm": "<0"
 	},
 	"dependencies": {
-		"@antfu/eslint-config": "catalog:",
-		"eslint-plugin-json-schema-validator": "catalog:"
+		"@antfu/eslint-config": "9.5.1",
+		"eslint-plugin-json-schema-validator": "6.3.1"
 	}
 }
