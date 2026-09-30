@@ -1,0 +1,12 @@
+{
+	"type": "module",
+	"private": true,
+	"packageManager": "pnpm@12.7.0",
+	"engines": {
+		"npm": "<0"
+	},
+	"dependencies": {
+		"@antfu/eslint-config": "catalog:",
+		"eslint-plugin-json-schema-validator": "catalog:"
+	}
+}
