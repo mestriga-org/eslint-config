@@ -1,5 +1,6 @@
 {
 	"type": "module",
+	"name": "@mestriga-org/eslint-config",
 	"packageManager": "pnpm@12.8.1",
 	"private": true,
 	"engines": {
@@ -12,7 +13,7 @@
 		"eslint-plugin-json-schema-validator": "6.3.1"
 	},
 	"devDependencies": {
-		"@typescript/native": "npm:typescript@7.0.2"
+		"@typescript/native": "catalog:"
 	},
 	"scripts": {
 		"prepare": "tsc"
