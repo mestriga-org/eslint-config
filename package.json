@@ -1,6 +1,6 @@
 {
 	"type": "module",
-	"name": "myconfig",
+	"name": "@mestriga-org/eslint-config",
 	"private": true,
 	"engines": {
 		"npm": "<0"
@@ -9,6 +9,6 @@
 		"prepare": ""
 	},
 	"dependencies": {
-		"is-odd": "3.0.1"
+		"@antfu/eslint-config": "9.5.1"
 	}
 }
