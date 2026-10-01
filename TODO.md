@@ -1,4 +1,4 @@
 TODO: tsconfig settings
 TODO: buildless
-TODO: versioning
-TODO: source maps
+TODO: lint myself
+TODO: node options in prepare
