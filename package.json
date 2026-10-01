@@ -3,14 +3,16 @@
 	"type": "module",
 	"private": true,
 	"packageManager": "pnpm@12.8.1",
-	"exports": "./dist/index.js",
-	"types": "./dist/index.d.mts",
-	"files": ["dist"],
+	"exports": "./index.js",
+	"types": "./index.d.ts",
+	"files": [
+		"index.d.ts",
+		"index.js"
+	],
 	"engines": {
 		"npm": "<0"
 	},
 	"scripts": {
-		"prepare": "tsc -p tsconfig.emit.json",
 		"lint": "NODE_OPTIONS=$NODE_OPTIONS' --no-addons --frozen-intrinsics --disable-proto=throw --permission --allow-fs-read=* --allow-fs-write=node_modules/.cache/eslint/* --allow-net --allow-worker' eslint --max-warnings=0 --concurrency=auto --flag=unstable_native_nodejs_ts_config"
 	},
 	"dependencies": {
@@ -18,8 +20,6 @@
 		"eslint-plugin-json-schema-validator": "6.3.1"
 	},
 	"devDependencies": {
-		"@typescript/native": "npm:typescript@7.0.2",
-		"eslint": "10.11.0",
-		"typescript": "npm:@typescript/typescript6@6.0.2"
+		"eslint": "10.11.0"
 	}
 }

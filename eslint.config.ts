@@ -1,12 +1,8 @@
 import type { Linter } from 'eslint'
-import factory from './src/index.ts'
+import factory from './index.js'
 
 const config: Promise<Linter.Config[]> = factory(
-	{
-		typescript: {
-			tsconfigPath: 'tsconfig.json',
-		},
-	},
+	{ },
 	{
 		files: ['pnpm-workspace.yaml'],
 		rules: {
