@@ -5,11 +5,6 @@ audit:
 
 autoDedupe: true
 
-catalog:
-  eslint: 10.11.0
-  typescript: npm:@typescript/typescript6@6.0.2
-catalogMode: prefer
-
 catalogPrune: true
 dedupeDirectDeps: true
 dedupePeers: true
