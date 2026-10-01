@@ -222,9 +222,7 @@ const config: Promise<Linter.Config[]> = antfu(
 		},
 	},
 	{
-		files: [
-			'.vscode/*.json',
-		],
+		files: ['.vscode/*.json'],
 		rules: {
 			'jsonc/comma-dangle': ['error', 'always-multiline'],
 		},
