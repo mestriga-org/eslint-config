@@ -16,7 +16,7 @@
 		"@typescript/native": "npm:typescript@7.0.2"
 	},
 	"scripts": {
-		"build": "tsc"
+		"prepare": "tsc"
 	},
 	"files": [
 		"dist"
