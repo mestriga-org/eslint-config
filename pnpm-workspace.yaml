@@ -11,7 +11,7 @@ catalog:
 catalogMode: strict
 
 catalogPrune: true
-dedupeDirectDeps: true
+# dedupeDirectDeps: true
 dedupePeers: true
 disallowWorkspaceCycles: true
 enablePrePostScripts: false
