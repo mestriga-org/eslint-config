@@ -1,5 +1,6 @@
 {
 	"type": "module",
+	"name": "myconfig",
 	"private": true,
 	"engines": {
 		"npm": "<0"
