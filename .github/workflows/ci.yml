@@ -1,0 +1,15 @@
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+permissions: { }
+jobs:
+  git-check:
+    permissions:
+      contents: read
+    uses: mestriga-org/github-workflows/.github/workflows/git-check.yml@main
+  pnpm-run-lint:
+    permissions:
+      contents: read
+    uses: mestriga-org/github-workflows/.github/workflows/pnpm-run-lint.yml@main
