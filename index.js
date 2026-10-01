@@ -5,7 +5,7 @@ const myConfig = (options, ...configs) => {
 		{
 			...options
 		},
-		...args
+		...configs
 	)
 }
 
