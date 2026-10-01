@@ -1,5 +1,6 @@
 {
 	"type": "module",
+	"name": "@mestriga-org/eslint-config",
 	"packageManager": "pnpm@12.8.1",
 	"private": true,
 	"engines": {
