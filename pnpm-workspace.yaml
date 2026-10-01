@@ -4,7 +4,6 @@ audit:
   ignorePrune: true
 
 autoDedupe: true
-
 catalogPrune: true
 dedupeDirectDeps: true
 dedupePeers: true

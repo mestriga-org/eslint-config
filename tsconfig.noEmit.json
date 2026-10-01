@@ -1,0 +1,13 @@
+{
+	"extends": "./tsconfig.base.json",
+	"compilerOptions": {
+		"tsBuildInfoFile": "${configDir}/node_modules/.cache/tsc/tsconfig.noEmit.tsbuildinfo",
+		"lib": ["ESNext"],
+		"allowImportingTsExtensions": true,
+		"skipLibCheck": true,
+	},
+	"files": [
+		"eslint.config.ts",
+		"src/index.ts",
+	],
+}

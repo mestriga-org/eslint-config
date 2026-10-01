@@ -1,7 +1,8 @@
 import antfu from '@antfu/eslint-config'
 import jsonSchemaValidator from 'eslint-plugin-json-schema-validator'
 
-const myConfig : typeof antfu = (options, ...userConfigs) => antfu(
+// eslint-disable-next-line ts/promise-function-async
+const factory: typeof antfu = (options, ...userConfigs) => antfu(
 	{
 		plugins: {
 			'json-schema-validator': jsonSchemaValidator,
@@ -27,12 +28,11 @@ const myConfig : typeof antfu = (options, ...userConfigs) => antfu(
 		},
 		type: 'lib',
 		typescript: true,
-		...options
+		...options,
 	},
 	{
 		files: ['pnpm-workspace.yaml'],
 		rules: {
-			'json-schema-validator/no-invalid': 'off', // temporary unitl v12.6 schema is published
 			'pnpm/yaml-enforce-settings': ['error', {
 				forbiddenFields: [
 					'allowedDeprecatedVersions',
@@ -224,11 +224,13 @@ const myConfig : typeof antfu = (options, ...userConfigs) => antfu(
 	{
 		files: [
 			'.vscode/*.json',
+			'tsconfig.json',
+			'tsconfig.*.json',
 		],
 		rules: {
 			'jsonc/comma-dangle': ['error', 'always-multiline'],
 		},
 	},
-	...userConfigs
+	...userConfigs,
 )
-export default myConfig
+export default factory

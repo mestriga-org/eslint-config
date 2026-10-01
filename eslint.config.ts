@@ -1,38 +1,15 @@
 import type { Linter } from 'eslint'
-import antfu from '@antfu/eslint-config'
-import jsonSchemaValidator from 'eslint-plugin-json-schema-validator'
+import factory from './src/index.ts'
 
-const config: Promise<Linter.Config[]> = antfu(
+const config: Promise<Linter.Config[]> = factory(
 	{
-		plugins: {
-			'json-schema-validator': jsonSchemaValidator,
+		typescript: {
+			tsconfigPath: 'tsconfig.json',
 		},
-		pnpm: {
-			sort: false,
-		},
-		rules: {
-			'json-schema-validator/no-invalid': 'error',
-		},
-		settings: {
-			'json-schema-validator': {
-				cache: {
-					path: 'node_modules/.cache/eslint/plugin-json-schema-validator',
-				},
-			},
-		},
-		stylistic: {
-			indent: 'tab',
-			overrides: {
-				'style/quote-props': ['error', 'as-needed'],
-			},
-		},
-		type: 'lib',
-		typescript: true,
 	},
 	{
 		files: ['pnpm-workspace.yaml'],
 		rules: {
-			'json-schema-validator/no-invalid': 'off', // temporary unitl v12.6 schema is published
 			'pnpm/yaml-enforce-settings': ['error', {
 				forbiddenFields: [
 					'allowedDeprecatedVersions',
@@ -45,6 +22,7 @@ const config: Promise<Linter.Config[]> = antfu(
 					'ca',
 					'cacheDir',
 					'cafile',
+					'catalogMode',
 					'catalogs',
 					'cert',
 					'childConcurrency',
@@ -200,7 +178,6 @@ const config: Promise<Linter.Config[]> = antfu(
 				settings: {
 					audit: { ignorePrune: true },
 					autoDedupe: true,
-					catalogMode: 'strict',
 					catalogPrune: true,
 					dedupeDirectDeps: true,
 					dedupePeers: true,
@@ -213,18 +190,6 @@ const config: Promise<Linter.Config[]> = antfu(
 					trustPolicyExcludePrune: true,
 				},
 			}],
-		},
-	},
-	{
-		files: ['package.json'],
-		rules: {
-			'jsonc/no-comments': ['error'],
-		},
-	},
-	{
-		files: ['.vscode/*.json'],
-		rules: {
-			'jsonc/comma-dangle': ['error', 'always-multiline'],
 		},
 	},
 )
