@@ -6,9 +6,15 @@
 	"engines": {
 		"npm": "<0"
 	},
-	"exports": "./index.js",
+	"exports": "./dist/index.js",
 	"dependencies": {
 		"@antfu/eslint-config": "9.5.1",
 		"eslint-plugin-json-schema-validator": "6.3.1"
+	},
+	"devDependencies": {
+		"@typescript/native": "npm:typescript@7.0.2"
+	},
+	"scripts": {
+		"build": "tsc"
 	}
 }

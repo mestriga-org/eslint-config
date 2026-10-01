@@ -1,11 +1,11 @@
 import antfu from '@antfu/eslint-config'
 
-const myConfig = (options, ...configs) => {
+const myConfig : typeof antfu = (options, ...userConfigs) => {
 	return antfu(
 		{
 			...options
 		},
-		...configs
+		...userConfigs
 	)
 }
 
