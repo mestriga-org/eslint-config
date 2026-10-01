@@ -4,6 +4,9 @@
 	"engines": {
 		"npm": "<0"
 	},
+	"scripts": {
+		"prepare": ""
+	},
 	"dependencies": {
 		"is-odd": "3.0.1"
 	}
