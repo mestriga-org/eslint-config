@@ -8,3 +8,5 @@ const myConfig = (options, ...configs) => {
 		...args
 	)
 }
+
+export default myConfig
