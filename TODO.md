@@ -1,3 +1,4 @@
 TODO: tsconfig settings
-TODO: make build unneeded
+TODO: buildless
 TODO: versioning
+TODO: source maps
