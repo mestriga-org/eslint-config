@@ -26,7 +26,7 @@ const myConfig : typeof antfu = (options, ...userConfigs) => antfu(
 			},
 		},
 		type: 'lib',
-		// typescript: true,
+		typescript: true,
 		...options
 	},
 	{
