@@ -11,4 +11,5 @@
 *.yaml text whitespace=tabwidth=2,tab-in-indent
 *.yml  text whitespace=tabwidth=2,tab-in-indent
 
-/pnpm-lock.yaml eol=lf
+/pnpm-lock.yaml      eol=lf
+/pnpm-workspace.yaml eol=lf
