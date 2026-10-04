@@ -1,16 +1,12 @@
-packages: []
-
-audit:
-  ignorePrune: true
-
 autoDedupe: true
-catalogPrune: true
-dedupeDirectDeps: true
-dedupePeers: true
 disallowWorkspaceCycles: true
-enablePrePostScripts: false
-hoist: false
+catalogPrune: true
 minimumReleaseAgeExcludePrune: true
+resolutionMode: lowest-direct
+dedupePeers: true
+strictPeerDependencies: true
+hoist: false
+enablePrePostScripts: false
 
 nodeOptions: >-
   ${NODE_OPTIONS- }
@@ -23,6 +19,9 @@ nodeOptions: >-
   --pending-deprecation
   --tls-min-v1.3
 
-resolutionMode: lowest-direct
-strictPeerDependencies: true
+audit:
+  ignorePrune: true
+
+dedupeDirectDeps: true
+packages: []
 trustPolicyExcludePrune: true
