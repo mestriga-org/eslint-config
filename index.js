@@ -7,9 +7,6 @@ function factory(options, ...userConfigs) {
 			plugins: {
 				'json-schema-validator': jsonSchemaValidator,
 			},
-			pnpm: {
-				sort: false,
-			},
 			rules: {
 				'json-schema-validator/no-invalid': 'error',
 			},
