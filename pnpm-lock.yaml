@@ -170,6 +170,9 @@ importers:
       '@antfu/eslint-config':
         specifier: ^9.5.1
         version: 9.5.1(@typescript-eslint/typescript-estree@8.71.0)(@typescript-eslint/utils@8.71.0)(@vue/compiler-sfc@3.5.43)(eslint-plugin-erasable-syntax-only@0.7.2)(eslint@10.11.0)(typescript@6.0.3)
+      eslint-plugin-erasable-syntax-only:
+        specifier: ^0.7.2
+        version: 0.7.2(@typescript-eslint/parser@8.71.0)(eslint@10.11.0)(typescript@6.0.3)
       eslint-plugin-json-schema-validator:
         specifier: ^6.3.1
         version: 6.3.1(eslint@10.11.0)
@@ -177,9 +180,6 @@ importers:
       eslint:
         specifier: 10.11.0
         version: 10.11.0
-      eslint-plugin-erasable-syntax-only:
-        specifier: ^0.7.2
-        version: 0.7.2(@typescript-eslint/parser@8.71.0)(eslint@10.11.0)(typescript@6.0.3)
 
 packages:
 
