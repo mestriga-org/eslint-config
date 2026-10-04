@@ -13,3 +13,5 @@
 
 /pnpm-lock.yaml      eol=lf
 /pnpm-workspace.yaml eol=lf
+
+.github/workflows/actions.lock text whitespace=tabwidth=2,tab-in-indent eol=lf
