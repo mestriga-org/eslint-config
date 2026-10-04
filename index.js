@@ -28,7 +28,7 @@ function factory(options, ...userConfigs) {
 			},
 			type: 'lib',
 			typescript: {
-				erasableOnly: true
+				erasableOnly: true,
 			},
 			...options,
 		},

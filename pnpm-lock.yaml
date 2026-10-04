@@ -169,7 +169,7 @@ importers:
     dependencies:
       '@antfu/eslint-config':
         specifier: ^9.5.1
-        version: 9.5.1(@typescript-eslint/typescript-estree@8.71.0)(@typescript-eslint/utils@8.71.0)(@vue/compiler-sfc@3.5.43)(eslint@10.11.0)(typescript@6.0.3)
+        version: 9.5.1(@typescript-eslint/typescript-estree@8.71.0)(@typescript-eslint/utils@8.71.0)(@vue/compiler-sfc@3.5.43)(eslint-plugin-erasable-syntax-only@0.7.2)(eslint@10.11.0)(typescript@6.0.3)
       eslint-plugin-json-schema-validator:
         specifier: ^6.3.1
         version: 6.3.1(eslint@10.11.0)
@@ -177,6 +177,9 @@ importers:
       eslint:
         specifier: 10.11.0
         version: 10.11.0
+      eslint-plugin-erasable-syntax-only:
+        specifier: ^0.7.2
+        version: 0.7.2(@typescript-eslint/parser@8.71.0)(eslint@10.11.0)(typescript@6.0.3)
 
 packages:
 
@@ -596,6 +599,10 @@ packages:
   cacheable@2.5.0:
     resolution: {integrity: sha512-60cyAOytib/OzBw1JNSoSV/boK1AtHryDIjvVBk7XbN4ugfkM3+Sry7fEjNgPMGgOjuaZPAp8ruZ0Cxafwyq9g==}
 
+  cached-factory@0.3.0:
+    resolution: {integrity: sha512-8PWf78SYJg9kGpUNlqOlg2iE4nu/iW7FidBVdvEZPy0GJRUyN91X7q0VzX/oyJE6bGrgr/bR0VhcGF87vgeQaw==}
+    engines: {node: '>=18'}
+
   caniuse-lite@1.0.30001813:
     resolution: {integrity: sha512-zfjJo4rM0+fUomGDBW/xcDjhIwz/210DGvip2MAMDZ8KHcRPnOHmEgHPZP0UHlZoxr8fYKVJOqcORhYQcG4FKQ==}
 
@@ -750,6 +757,14 @@ packages:
       '@typescript-eslint/typescript-estree': '*'
       '@typescript-eslint/utils': '*'
       eslint: '*'
+
+  eslint-plugin-erasable-syntax-only@0.7.2:
+    resolution: {integrity: sha512-kRVdC8J08K+10AAtL0SMNUbiMaKeEEFlpVJ7CAAixgOTfpfKlz1Y59b9E5emCaDBGu7qXOGOfowGHUaFzwzToA==}
+    engines: {node: '>=20.18.0'}
+    peerDependencies:
+      '@typescript-eslint/parser': '>=8'
+      eslint: '>=9'
+      typescript: '>=5'
 
   eslint-plugin-es-x@7.8.0:
     resolution: {integrity: sha512-7Ds8+wAAoV3T+LAKeu39Y5BzXCrGKrcISfgKEqTS4BDN8SFEDQd0S43jiQ8vIa3wUKD07qitZdfzlenSi8/0qQ==}
@@ -1584,7 +1599,7 @@ packages:
 
 snapshots:
 
-  '@antfu/eslint-config@9.5.1(@typescript-eslint/typescript-estree@8.71.0)(@typescript-eslint/utils@8.71.0)(@vue/compiler-sfc@3.5.43)(eslint@10.11.0)(typescript@6.0.3)':
+  '@antfu/eslint-config@9.5.1(@typescript-eslint/typescript-estree@8.71.0)(@typescript-eslint/utils@8.71.0)(@vue/compiler-sfc@3.5.43)(eslint-plugin-erasable-syntax-only@0.7.2)(eslint@10.11.0)(typescript@6.0.3)':
     dependencies:
       '@antfu/install-pkg': 2.1.0
       '@clack/prompts': 1.8.1
@@ -1623,6 +1638,8 @@ snapshots:
       toml-eslint-parser: 1.0.3
       vue-eslint-parser: 10.4.1(eslint@10.11.0)
       yaml-eslint-parser: 2.1.0
+    optionalDependencies:
+      eslint-plugin-erasable-syntax-only: 0.7.2(@typescript-eslint/parser@8.71.0)(eslint@10.11.0)(typescript@6.0.3)
     transitivePeerDependencies:
       - '@eslint/json'
       - '@typescript-eslint/typescript-estree'
@@ -2033,6 +2050,8 @@ snapshots:
       keyv: 5.6.0
       qified: 0.10.1
 
+  cached-factory@0.3.0: {}
+
   caniuse-lite@1.0.30001813: {}
 
   ccount@2.0.1: {}
@@ -2141,6 +2160,16 @@ snapshots:
       '@typescript-eslint/typescript-estree': 8.71.0(typescript@6.0.3)
       '@typescript-eslint/utils': 8.71.0(eslint@10.11.0)(typescript@6.0.3)
       eslint: 10.11.0
+
+  eslint-plugin-erasable-syntax-only@0.7.2(@typescript-eslint/parser@8.71.0)(eslint@10.11.0)(typescript@6.0.3):
+    dependencies:
+      '@typescript-eslint/parser': 8.71.0(eslint@10.11.0)(typescript@6.0.3)
+      '@typescript-eslint/utils': 8.71.0(eslint@10.11.0)(typescript@6.0.3)
+      cached-factory: 0.3.0
+      eslint: 10.11.0
+      typescript: 6.0.3
+    transitivePeerDependencies:
+      - supports-color
 
   eslint-plugin-es-x@7.8.0(eslint@10.11.0):
     dependencies:
