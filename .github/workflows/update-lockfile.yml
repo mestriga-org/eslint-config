@@ -19,8 +19,11 @@ jobs:
       - uses: actions/checkout@v7.0.1
         with:
           persist-credentials: false
+          set-safe-directory: false
       - uses: pnpm/setup@v3.1.1
         with:
           install: false
+          require-lockfile: true
+          node-version-file: .node-version
       - name: Update dependencies, Node.js and pnpm
         uses: pnpm/update@v0.0.0
