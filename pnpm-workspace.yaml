@@ -5,6 +5,7 @@ minimumReleaseAgeExcludePrune: true
 resolutionMode: lowest-direct
 dedupePeers: true
 strictPeerDependencies: true
+nodeExperimentalPackageMap: true
 hoist: false
 
 lockfile:
