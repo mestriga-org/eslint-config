@@ -1,22 +1,8 @@
 import antfu from '@antfu/eslint-config'
-import jsonSchemaValidator from 'eslint-plugin-json-schema-validator'
 
 function factory(options, ...userConfigs) {
 	return antfu(
 		{
-			plugins: {
-				'json-schema-validator': jsonSchemaValidator,
-			},
-			rules: {
-				'json-schema-validator/no-invalid': 'error',
-			},
-			settings: {
-				'json-schema-validator': {
-					cache: {
-						path: 'node_modules/.cache/eslint/plugin-json-schema-validator',
-					},
-				},
-			},
 			stylistic: {
 				indent: 'tab',
 				overrides: {
