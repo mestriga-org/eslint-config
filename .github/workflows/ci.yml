@@ -2,16 +2,12 @@
 
 name: CI
 on:
-  pull_request:
-    branches: [main]
-  push:
-    branches: [main]
+  pull_request: {branches: main}
+  push: {branches: main}
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
   cancel-in-progress: true
-defaults:
-  run:
-    shell: sh
+defaults: {run: {shell: sh}}
 permissions: {}
 jobs:
   git-check:
