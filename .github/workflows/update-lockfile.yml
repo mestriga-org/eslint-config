@@ -25,5 +25,13 @@ jobs:
           install: false
           require-lockfile: true
           node-version-file: .node-version
+      # TODO add permissions
+      - uses: actions/create-github-app-token@v3
+        id: app-token
+        with:
+          client-id: ${{ vars.APP_CLIENT_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
       - name: Update dependencies, Node.js and pnpm
         uses: pnpm/update@v0.0.0
+        with:
+          token: ${{ steps.app-token.outputs.token }}
