@@ -26,7 +26,6 @@ jobs:
         with:
           install: false
           require-lockfile: true
-          node-version-file: .node-version
       - uses: actions/create-github-app-token@v3.3.0
         id: app-token
         with:
