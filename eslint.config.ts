@@ -74,7 +74,6 @@ const config: Promise<Linter.Config[]> = factory(
 					'key',
 					'linkWorkspacePackages',
 					'localAddress',
-					'lockfile',
 					'lockfileIncludeTarballUrl',
 					'loglevel',
 					'managePackageManagerVersions',

@@ -99,7 +99,6 @@ function factory(options, ...userConfigs) {
 						'key',
 						'linkWorkspacePackages',
 						'localAddress',
-						'lockfile',
 						'lockfileIncludeTarballUrl',
 						'loglevel',
 						'managePackageManagerVersions',

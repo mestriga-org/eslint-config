@@ -6,6 +6,10 @@ resolutionMode: lowest-direct
 dedupePeers: true
 strictPeerDependencies: true
 hoist: false
+
+lockfile:
+  includeResolutionSettings: true
+
 enablePrePostScripts: false
 
 nodeOptions: >-
