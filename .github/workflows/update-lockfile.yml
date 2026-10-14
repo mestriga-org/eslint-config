@@ -8,7 +8,7 @@ on:
 concurrency:
   group: update-lockfile
   cancel-in-progress: false
-defaults: { run: { shell: sh } }
+defaults: {run: {shell: sh}}
 permissions: {}
 jobs:
   update-lockfile:
