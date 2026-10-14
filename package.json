@@ -9,6 +9,13 @@
 		"index.d.ts",
 		"index.js"
 	],
+	"devEngines": {
+		"runtime": {
+			"name": "node",
+			"version": "^26.11.1",
+			"onFail": "download"
+		}
+	},
 	"engines": {
 		"npm": "<0"
 	},
