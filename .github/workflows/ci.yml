@@ -2,17 +2,37 @@
 
 name: CI
 on:
-  merge_group:
-  pull_request:
-  push:
-    branches: [main]
-permissions: { }
+  pull_request: { branches: main }
+  push: { branches: main }
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
+defaults:
+  run:
+    shell: sh
+permissions: {}
 jobs:
   git-check:
-    permissions:
-      contents: read
+    permissions: { contents: read }
     uses: mestriga-org/public-workflows/.github/workflows/git-check.yml@main
   pnpm-run-lint:
-    permissions:
-      contents: read
+    permissions: { contents: read }
     uses: mestriga-org/public-workflows/.github/workflows/pnpm-run-lint.yml@main
+  renovate-status-check:
+    permissions: { statuses: read }
+    uses: mestriga-org/public-workflows/.github/workflows/renovate-status-check.yml@main
+  workflow-lint:
+    permissions: { contents: read }
+    uses: mestriga-org/public-workflows/.github/workflows/workflow-lint.yml@main
+  ci:
+    if: (!cancelled())
+    runs-on: ubuntu-slim
+    timeout-minutes: 1
+    needs:
+      - git-check
+      - pnpm-run-lint
+      - renovate-status-check
+      - workflow-lint
+    steps:
+      - if: contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled')
+        run: exit 1
