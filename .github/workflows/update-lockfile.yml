@@ -1,0 +1,26 @@
+# This workflow is managed by gh actions-lock.
+
+name: Update Lockfile
+on:
+  schedule:
+    - cron: '0 6 * * *'  # Daily at 6 AM UTC
+  workflow_dispatch: {}  # Allow manual triggering
+permissions:
+  contents: write
+  pull-requests: write
+concurrency:
+  group: update-lockfile
+  cancel-in-progress: false
+jobs:
+  update-lockfile:
+    runs-on: ubuntu-slim
+    timeout-minutes: 5
+    steps:
+    - uses: actions/checkout@v7.0.1
+      with:
+        persist-credentials: false
+    - uses: pnpm/setup@v3.1.1
+      with:
+        install: false
+    - name: Update dependencies, Node.js and pnpm
+      uses: pnpm/update@v0.0.0
