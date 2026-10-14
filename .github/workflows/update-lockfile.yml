@@ -39,4 +39,4 @@ jobs:
           token: ${{ steps.app-token.outputs.token }}
       - env:
           GH_TOKEN: ${{ github.token }}
-        run: exec gh pr merge --auto -- chore/update-dependencies
+        run: exec gh pr merge -s --auto -- chore/update-dependencies
