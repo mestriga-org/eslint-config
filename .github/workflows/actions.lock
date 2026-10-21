@@ -5,7 +5,7 @@ version: 'v0.0.3'
 workflows:
     '.github/workflows/ci.yml': []
     '.github/workflows/dependabot-automerge.yml':
-        - 'dependabot/fetch-metadata@v3.0.0'
+        - 'dependabot/fetch-metadata@v3.1.0'
     '.github/workflows/update-lockfile.yml':
         - 'actions/checkout@v7.0.1'
         - 'actions/create-github-app-token@v3.3.0'
@@ -22,9 +22,9 @@ dependencies:
         commit: 'sha1-64ab729a6294000f5aa4a4bc0b73d1f32bc45510'
         owner_id: 44036562
         repo_id: 642580244
-    'dependabot/fetch-metadata@v3.0.0':
-        ref: 'v3.0.0'
-        commit: 'sha1-ffa630c65fa7e0ecfa0625b5ceda64399aea1b36'
+    'dependabot/fetch-metadata@v3.1.0':
+        ref: 'v3.1.0'
+        commit: 'sha1-25dd0e34f4fe68f24cc83900b1fe3fe149efef98'
         owner_id: 27347476
         repo_id: 371068214
     'pnpm/setup@v3.1.1':
