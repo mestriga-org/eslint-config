@@ -21,10 +21,11 @@ jobs:
           permission-pull-requests: write
       - name: Auto-merge
         env:
-          argv1: ${{ github.event.pull_request.html_url }}
+          argv1: ${{ github.event.pull_request.head.sha }}
+          argv2: ${{ github.event.pull_request.html_url }}
           GH_TOKEN: ${{ steps.app-token.outputs.token }}
         run: |
           set -Cfu
-          set -- "${argv1:?}"
-          unset -v argv1
-          exec gh pr merge -s --auto -- "$@"
+          set -- "${argv1:?}" "${argv2:?}"
+          unset -v argv1 argv2
+          exec gh pr merge -s --auto --match-head-commit "${1:?}" -- "${2:?}"
