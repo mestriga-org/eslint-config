@@ -1,0 +1,20 @@
+name: Dependabot auto-merge
+on:
+  pull_request: { branches: main }
+defaults: { run: { shell: sh } }
+permissions: { }
+jobs:
+  dependabot:
+    permissions:
+      contents: write
+      pull-requests: write
+    runs-on: ubuntu-slim
+    if: startsWith(github.head_ref, 'dependabot/')
+    steps:
+      - name: Fetch Dependabot metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@v3.1.0
+      - name: Enable auto-merge
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: exec gh pr merge -s --auto --
