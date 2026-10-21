@@ -16,7 +16,7 @@ jobs:
         uses: dependabot/fetch-metadata@v3.1.0
       - name: Enable auto-merge
         env:
-          argv1:  ${{ github.event.pull_request.html_url }}
+          argv1: ${{ github.event.pull_request.html_url }}
           GH_TOKEN: ${{ github.token }}
         run: |
           set -Cfu
