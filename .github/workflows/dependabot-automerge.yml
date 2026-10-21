@@ -4,7 +4,8 @@ on:
 defaults: {run: {shell: sh}}
 permissions: { }
 jobs:
-  dependabot:
+  dependabot-auto-merge:
+    timeout-minutes: 1
     permissions:
       contents: write
       pull-requests: write
