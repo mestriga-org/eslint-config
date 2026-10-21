@@ -41,4 +41,4 @@ jobs:
       - name: Enable auto-merge
         env:
           GH_TOKEN: ${{ steps.app-token.outputs.token }}
-        run: exec gh pr merge -s --auto -- chore/update-dependencies
+        run: exec gh pr merge -s --auto --
