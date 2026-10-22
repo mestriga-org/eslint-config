@@ -2,7 +2,7 @@
 	"name": "@mestriga-org/eslint-config",
 	"type": "module",
 	"private": true,
-	"packageManager": "pnpm@12.14.0",
+	"packageManager": "pnpm@12.15.0",
 	"exports": "./index.js",
 	"types": "./index.d.ts",
 	"files": [
