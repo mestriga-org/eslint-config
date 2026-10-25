@@ -7,6 +7,7 @@ function factory(options, ...userConfigs) {
 				indent: 'tab',
 				overrides: {
 					'style/quote-props': ['error', 'as-needed'],
+					'yaml/flow-mapping-curly-spacing': ['error', 'always'],
 				},
 			},
 			type: 'lib',

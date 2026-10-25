@@ -6,11 +6,11 @@ on:
 concurrency:
   group: update-lockfile
   cancel-in-progress: false
-defaults: {run: {shell: sh}}
-permissions: {}
+defaults: { run: { shell: sh } }
+permissions: { }
 jobs:
   update-lockfile:
-    permissions: {contents: read}
+    permissions: { contents: read }
     runs-on: ubuntu-slim
     timeout-minutes: 5
     steps:

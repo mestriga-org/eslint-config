@@ -1,7 +1,7 @@
 name: Dependabot auto-merge
 on:
-  pull_request: {branches: main}
-defaults: {run: {shell: sh}}
+  pull_request: { branches: main }
+defaults: { run: { shell: sh } }
 permissions: { }
 jobs:
   dependabot-auto-merge:
