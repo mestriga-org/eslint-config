@@ -9,6 +9,7 @@ hoist: false
 
 lockfile:
   includeResolutionSettings: true
+  integrityTarget: tar
 
 enablePrePostScripts: false
 

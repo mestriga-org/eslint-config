@@ -179,7 +179,10 @@ const config: Promise<Linter.Config[]> = factory(
 					disallowWorkspaceCycles: true,
 					enablePrePostScripts: false,
 					hoist: false,
-					lockfile: { includeResolutionSettings: true },
+					lockfile: {
+						includeResolutionSettings: true,
+						integrityTarget: 'tar',
+					},
 					minimumReleaseAgeExcludePrune: true,
 					resolutionMode: 'lowest-direct',
 					strictPeerDependencies: true,
