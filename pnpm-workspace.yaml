@@ -31,5 +31,4 @@ audit:
 dedupeDirectDeps: true
 trustPolicyExcludePrune: true
 catalog:
-  '@antfu/eslint-config': ^9.5.1
   eslint: ^10.13.0
