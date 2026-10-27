@@ -29,3 +29,5 @@ audit:
 
 dedupeDirectDeps: true
 trustPolicyExcludePrune: true
+
+catalogMode: strict
