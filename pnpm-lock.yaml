@@ -170,6 +170,9 @@ settings:
 
 catalogs:
   default:
+    '@antfu/eslint-config':
+      specifier: ^9.5.1
+      version: 9.5.1
     eslint:
       specifier: ^10.13.0
       version: 10.13.0
@@ -179,7 +182,7 @@ importers:
   .:
     dependencies:
       '@antfu/eslint-config':
-        specifier: ^9.5.1
+        specifier: 'catalog:'
         version: 9.5.1(@typescript-eslint/typescript-estree@8.72.0)(@typescript-eslint/utils@8.72.0)(@vue/compiler-sfc@3.5.44)(eslint-plugin-erasable-syntax-only@0.7.2)(eslint@10.13.0)(typescript@6.0.3)
       eslint-plugin-erasable-syntax-only:
         specifier: ^0.7.2
@@ -514,13 +517,13 @@ packages:
     resolution: {integrity: sha512-uX5lfRM92cfAwKY6d43HaaoWIrKRXOnXdFbLnqc8G1u9IOG/3e9a1gCA5WswTaJNfyOBWE1rB3AS30kdRVMn+A==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@vitest/eslint-plugin@1.6.27':
-    resolution: {integrity: sha512-9LBO1OMWoRxK3WJ1Sdw4Gk40jnROxfWIq9KLgTXWE/n1l2Ps/Yy4/6yTRp5MXkYxPgO0XunJdOOKGcKn0MyZWA==}
-    engines: {node: '>=18'}
+  '@vitest/eslint-plugin@1.6.28':
+    resolution: {integrity: sha512-/1PKtlnsHqLagZOZOQxMwE9WFkPh3spQ4LIih/sl4bcjnRz9nMRErXQAgVUHlM07ZuWOkQyxEDwINdo1eTmekQ==}
+    engines: {node: '>=22'}
     peerDependencies:
       '@typescript-eslint/eslint-plugin': '*'
       eslint: '>=8.57.0'
-      typescript: '>=5.0.0'
+      typescript: '>=6.0.0'
       vitest: '*'
     peerDependenciesMeta:
       '@typescript-eslint/eslint-plugin':
@@ -747,8 +750,8 @@ packages:
     peerDependencies:
       eslint: '*'
 
-  eslint-plugin-antfu@3.2.3:
-    resolution: {integrity: sha512-vU2tRxl86nIm5+X/UFG9Pv1Xs8O3RMpU+N/g1oscazzeYkHqqQNYOhd8P+U6ygt/tMtEsAl8Mnlk1pviU5p3aQ==}
+  eslint-plugin-antfu@3.3.1:
+    resolution: {integrity: sha512-a31VBof32pabjFMFVoE2ZsCNP1A+a5mVz2yJxjjZcIwXr2jM2V7grrwEvUxomiwjWtUS8lr0oO2bhcIvBMYrZQ==}
     peerDependencies:
       eslint: '*'
 
@@ -1079,8 +1082,8 @@ packages:
     resolution: {integrity: sha512-4Of/7F6kJzWDaxFvUKM3BEMih4LgyW9tq4tk6T1zntjEFxVUe5Vt0bDYCpmrclTnoMF5gXeD+iFzHY2Y02Y4gg==}
     engines: {node: ^22.22.2 || >=24.15.0}
 
-  jsdoc-type-pratt-parser@9.3.0:
-    resolution: {integrity: sha512-Q4CXSKmV/u8cWBvXxYqR1Nf98KMZVy13ylWUdETDACRNvbEFCxm40dT/Ej4xkwy4bWD8dhpSl2DAnEl3yRjTbQ==}
+  jsdoc-type-pratt-parser@9.4.0:
+    resolution: {integrity: sha512-ckQTIxsadUhC6Igfd4XKGB2pMeKaloKNR4mSQDf5SUu1kTxr0PWQP8yzq61GYMhRDP8NWI01g7cEZWovW+3xlA==}
     engines: {node: ^22.22.2 || >=24.15.0}
 
   jsesc@3.1.0:
@@ -1718,14 +1721,14 @@ snapshots:
       '@stylistic/eslint-plugin': 5.10.0(eslint@10.13.0)
       '@typescript-eslint/eslint-plugin': 8.72.0(@typescript-eslint/parser@8.72.0)(eslint@10.13.0)(typescript@6.0.3)
       '@typescript-eslint/parser': 8.72.0(eslint@10.13.0)(typescript@6.0.3)
-      '@vitest/eslint-plugin': 1.6.27(@typescript-eslint/eslint-plugin@8.72.0)(eslint@10.13.0)(typescript@6.0.3)
+      '@vitest/eslint-plugin': 1.6.28(@typescript-eslint/eslint-plugin@8.72.0)(eslint@10.13.0)(typescript@6.0.3)
       ansis: 4.4.0
       cac: 7.1.0
       eslint: 10.13.0
       eslint-config-flat-gitignore: 2.4.0(eslint@10.13.0)
       eslint-flat-config-utils: 3.2.0
       eslint-merge-processors: 2.0.0(eslint@10.13.0)
-      eslint-plugin-antfu: 3.2.3(eslint@10.13.0)
+      eslint-plugin-antfu: 3.3.1(eslint@10.13.0)
       eslint-plugin-command: 4.0.0(@typescript-eslint/typescript-estree@8.72.0)(@typescript-eslint/utils@8.72.0)(eslint@10.13.0)
       eslint-plugin-import-lite: 0.6.0(eslint@10.13.0)
       eslint-plugin-jsdoc: 64.5.4(eslint@10.13.0)(typescript@6.0.3)
@@ -2052,7 +2055,7 @@ snapshots:
       '@typescript-eslint/types': 8.72.0
       eslint-visitor-keys: 5.0.1
 
-  '@vitest/eslint-plugin@1.6.27(@typescript-eslint/eslint-plugin@8.72.0)(eslint@10.13.0)(typescript@6.0.3)':
+  '@vitest/eslint-plugin@1.6.28(@typescript-eslint/eslint-plugin@8.72.0)(eslint@10.13.0)(typescript@6.0.3)':
     dependencies:
       '@typescript-eslint/scope-manager': 8.72.0
       '@typescript-eslint/utils': 8.72.0(eslint@10.13.0)(typescript@6.0.3)
@@ -2244,7 +2247,7 @@ snapshots:
     dependencies:
       eslint: 10.13.0
 
-  eslint-plugin-antfu@3.2.3(eslint@10.13.0):
+  eslint-plugin-antfu@3.3.1(eslint@10.13.0):
     dependencies:
       eslint: 10.13.0
 
@@ -2362,7 +2365,7 @@ snapshots:
       '@eslint-community/regexpp': 4.12.2
       comment-parser: 1.4.9
       eslint: 10.13.0
-      jsdoc-type-pratt-parser: 9.3.0
+      jsdoc-type-pratt-parser: 9.4.0
       refa: 0.12.1
       regexp-ast-analysis: 0.7.1
       scslre: 0.3.0
@@ -2630,7 +2633,7 @@ snapshots:
     dependencies:
       '@types/estree': 1.0.9
 
-  jsdoc-type-pratt-parser@9.3.0:
+  jsdoc-type-pratt-parser@9.4.0:
     dependencies:
       '@types/estree': 1.0.9
 
