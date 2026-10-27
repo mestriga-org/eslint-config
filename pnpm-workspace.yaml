@@ -1,5 +1,6 @@
 autoDedupe: true
 disallowWorkspaceCycles: true
+catalogMode: prefer
 catalogPrune: true
 minimumReleaseAgeExcludePrune: true
 resolutionMode: lowest-direct
@@ -29,3 +30,5 @@ audit:
 
 dedupeDirectDeps: true
 trustPolicyExcludePrune: true
+catalog:
+  eslint: ^10.13.0
