@@ -28,5 +28,4 @@ audit:
   ignorePrune: true
 
 dedupeDirectDeps: true
-packages: []
 trustPolicyExcludePrune: true

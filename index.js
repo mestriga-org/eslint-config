@@ -181,7 +181,6 @@ function factory(options, ...userConfigs) {
 						'virtualStoreType',
 						'workspaceConcurrency',
 					],
-					requiredFields: ['packages'],
 				}],
 			},
 		},

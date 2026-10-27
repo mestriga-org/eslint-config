@@ -169,7 +169,6 @@ const config: Promise<Linter.Config[]> = factory(
 					'virtualStoreType',
 					'workspaceConcurrency',
 				],
-				requiredFields: ['packages'],
 				settings: {
 					audit: { ignorePrune: true },
 					autoDedupe: true,
