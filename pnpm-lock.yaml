@@ -168,12 +168,6 @@ settings:
   integrityTarget: tar
   linkWorkspacePackages: false
 
-catalogs:
-  default:
-    eslint:
-      specifier: ^10.13.0
-      version: 10.13.0
-
 importers:
 
   .:
@@ -186,7 +180,7 @@ importers:
         version: 0.7.2(@typescript-eslint/parser@8.72.0)(eslint@10.13.0)(typescript@6.0.3)
     devDependencies:
       eslint:
-        specifier: 'catalog:'
+        specifier: 10.13.0
         version: 10.13.0
       node:
         specifier: runtime:^26.12.1
