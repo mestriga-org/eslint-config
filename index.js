@@ -1,6 +1,6 @@
 import antfu from '@antfu/eslint-config'
 
-function factory(options, ...userConfigs) {
+function factory(options = {}, ...userConfigs) {
 	return antfu(
 		Object.create(options, {
 			stylistic: {
