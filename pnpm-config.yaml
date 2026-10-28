@@ -1,0 +1,20 @@
+autoDedupe: true
+disallowWorkspaceCycles: true
+catalogPrune: true
+minimumReleaseAgeExcludePrune: true
+resolutionMode: lowest-direct
+dedupePeers: true
+strictPeerDependencies: true
+hoist: false
+
+lockfile:
+  includeResolutionSettings: true
+  integrityTarget: tar
+
+enablePrePostScripts: false
+
+audit:
+  ignorePrune: true
+
+dedupeDirectDeps: true
+trustPolicyExcludePrune: true
