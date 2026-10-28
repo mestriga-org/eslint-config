@@ -2,20 +2,59 @@ import antfu from '@antfu/eslint-config'
 
 function factory(options, ...userConfigs) {
 	return antfu(
-		{
+		Object.create(options, {
 			stylistic: {
-				indent: 'tab',
-				overrides: {
-					'style/quote-props': ['error', 'as-needed'],
-					'yaml/flow-mapping-curly-spacing': ['error', 'always'],
+				get() {
+					const stylistic = options.stylistic
+					const stylisticOptions
+						= typeof stylistic === 'object'
+							? stylistic
+							: stylistic !== false && { }
+					return stylisticOptions && {
+						indent: 'tab',
+						...stylisticOptions,
+						overrides: {
+							'style/quote-props': ['error', 'as-needed'],
+							'yaml/flow-mapping-curly-spacing': ['error', 'always'],
+							...stylisticOptions.overrides,
+						},
+					}
 				},
 			},
-			type: 'lib',
-			typescript: {
-				erasableOnly: true,
+			type: {
+				get() {
+					const { type = 'lib' } = options
+					return type
+				},
 			},
-			...options,
-		},
+			typescript: {
+				get() {
+					const { typescript = true } = options
+					return typescript && {
+						erasableOnly: true,
+						...typescript,
+					}
+				},
+			},
+		}),
+		...((options.jsonc ?? true) && [
+			{
+				files: ['package.json'],
+				rules: {
+					'jsonc/no-comments': ['error'],
+				},
+			},
+			{
+				files: [
+					'.vscode/*.json',
+					'tsconfig.json',
+					'tsconfig.*.json',
+				],
+				rules: {
+					'jsonc/comma-dangle': ['error', 'always-multiline'],
+				},
+			},
+		]),
 		{
 			files: ['pnpm-workspace.yaml'],
 			rules: {
@@ -185,22 +224,6 @@ function factory(options, ...userConfigs) {
 						'include',
 					],
 				}],
-			},
-		},
-		{
-			files: ['package.json'],
-			rules: {
-				'jsonc/no-comments': ['error'],
-			},
-		},
-		{
-			files: [
-				'.vscode/*.json',
-				'tsconfig.json',
-				'tsconfig.*.json',
-			],
-			rules: {
-				'jsonc/comma-dangle': ['error', 'always-multiline'],
 			},
 		},
 		...userConfigs,
