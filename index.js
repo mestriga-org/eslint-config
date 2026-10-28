@@ -181,6 +181,9 @@ function factory(options, ...userConfigs) {
 						'virtualStoreType',
 						'workspaceConcurrency',
 					],
+					requiredFields: [
+						'include',
+					],
 				}],
 			},
 		},
