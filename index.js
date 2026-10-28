@@ -221,6 +221,7 @@ function factory(options = {}, ...userConfigs) {
 						'workspaceConcurrency',
 					],
 					requiredFields: [
+						'catalogMode',
 						'include',
 					],
 				}],
