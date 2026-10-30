@@ -24,8 +24,9 @@ jobs:
           argv1: ${{ github.event.pull_request.head.sha }}
           argv2: ${{ github.event.pull_request.html_url }}
           GH_TOKEN: ${{ steps.app-token.outputs.token }}
-        run: |
+        run: |-
           set -Cfu
+          unset -v ACTIONS_ID_TOKEN_REQUEST_TOKEN ACTIONS_ID_TOKEN_REQUEST_URL
           set -- "${argv1:?}" "${argv2:?}"
           unset -v argv1 argv2
           exec gh pr merge -s --auto --match-head-commit "${1:?}" -- "${2:?}"

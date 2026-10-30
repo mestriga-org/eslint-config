@@ -37,4 +37,7 @@ jobs:
       - name: Auto-merge
         env:
           GH_TOKEN: ${{ steps.app-token.outputs.token }}
-        run: exec gh pr merge -s --auto --
+        run: |-
+          set -Cfu
+          unset -v ACTIONS_ID_TOKEN_REQUEST_TOKEN ACTIONS_ID_TOKEN_REQUEST_URL
+          exec gh pr merge -s --auto --
