@@ -9,7 +9,7 @@ indent_size = 2
 indent_size = 2
 indent_style = space
 
-[pnpm-lock.yaml]
+[pnpm-{lock,workspace}.yaml]
 end_of_line = lf
 
 [.github/workflows/actions.lock]
