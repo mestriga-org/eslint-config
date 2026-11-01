@@ -10,7 +10,7 @@ workflows:
     '.github/workflows/update-lockfile.yml':
         - 'actions/checkout@v7.0.1'
         - 'actions/create-github-app-token@v3.1.0'
-        - 'pnpm/setup@v3.1.1'
+        - 'pnpm/setup@v3.1.2'
         - 'pnpm/update@v0.0.0'
 dependencies:
     'actions/checkout@v7.0.1':
@@ -33,9 +33,9 @@ dependencies:
         commit: 'sha1-25dd0e34f4fe68f24cc83900b1fe3fe149efef98'
         owner_id: 27347476
         repo_id: 371068214
-    'pnpm/setup@v3.1.1':
-        ref: 'v3.1.1'
-        commit: 'sha1-a0881977cd8ea73b1ed212236c99ca10dcc80cf4'
+    'pnpm/setup@v3.1.2':
+        ref: 'v3.1.2'
+        commit: 'sha1-fa36a5ef7dcdefc3a7cb25655c122e00cf6e636e'
         owner_id: 21320719
         repo_id: 1235693694
     'pnpm/update@v0.0.0':
