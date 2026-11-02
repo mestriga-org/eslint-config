@@ -15,4 +15,4 @@ nodeOptions: >-
   --tls-min-v1.3
 
 catalog:
-  eslint: ^10.13.0
+  eslint: ^10.14.0
