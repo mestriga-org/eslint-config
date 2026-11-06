@@ -23,7 +23,7 @@
 		"lint": "NODE_OPTIONS=$NODE_OPTIONS' --disable-proto=throw --permission --allow-fs-read=* --allow-worker' eslint --max-warnings=0 --concurrency=auto --flag=unstable_native_nodejs_ts_config"
 	},
 	"dependencies": {
-		"@antfu/eslint-config": "^9.5.1",
+		"@antfu/eslint-config": "^10.0.0",
 		"eslint-plugin-erasable-syntax-only": "^0.7.2"
 	},
 	"devDependencies": {
